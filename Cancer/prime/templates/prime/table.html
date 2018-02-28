@@ -1,0 +1,15 @@
+{# tutorial/templates/people.html #}
+{% load render_table from django_tables2 %}
+
+{% load static %}
+
+<!doctype html>
+<html>
+    <head>
+        <pre style="text-align:center; font-size:20px; letter-spacing:1em;"><h1>Existing Data</h1></pre>
+        <link rel="stylesheet" href="{% static 'django_tables2/themes/paleblue/css/screen.css' %}"   media="screen"/>
+    </head>
+    <body style="background-color : lightblue;">
+        {% render_table table %}
+    </body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			@keyframes LogoRotate {
+				from {transform:rotateY(360deg)}
+				to {transform:rotateY(0deg)}
+			}
+			
+			@keyframes MoveBox{
+				0%{margin-left:0.3cm; content:"Seminar";}
+				33%{margin-left:2.7cm; content:"Workshop"}
+				66%{margin-left:5.2cm; content:"Hackathon";}
+				100%{margin-left:0.3cm; content:"Seminar";}
+			}
+			@keyframes FadeInOut {
+				0% {opacity:1;}
+				50%{opacity:0.5;}
+				100% {opacity:0;}
+			}
+			
+			#e1::after,#e2::after, #e3::after, #e4::after{
+			width:90px;
+			height:30px;
+			border:1px solid black;
+			float:left;
+			margin-left:0.3cm;
+			animation-name:MoveBox;
+			animation-duration:8s;
+			animation-iteration-count:infinite;
+			
+			}
+			#i1{
+				float:left;
+				width:150px;
+				height:80px;
+				margin-left:4.5cm;	
+				animation-name:LogoRotate;
+			    animation-duration: 8s;
+				animation-timing-function:linear;
+				animation-iteration-count:infinite;
+			}
+			#LabCS, #LabECE, #LabEEE, #LabIT, #StudentCS, #StudentIT, #StudentEEE, #StudentECE{
+				width:120px;
+				height:100px;
+				border:2px solid black;
+				border-radius:20px;
+			}
+			#csediv, #itdiv, #eeediv, #ecediv{
+				float:left;
+				border:transparent;
+				width:150px;
+				height:40px;
+				position:relative;
+			}
+			#csediv img, #itdiv img, #ecediv img, #eeediv img{
+				position:absolute;
+				left: 0;
+				transition: opacity 1s ease-in-out;
+			}
+			
+			#csediv img.top, #ecediv img.top, #eeediv img.top, #itdiv img.top{
+			animation-name: FadeInOut;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+			animation-duration: 5s;
+			animation-direction: alternate;
+			}
+			.button {
+				background-color:white;
+				color:blue;
+				padding: 15px 30px;
+				text-align:"center";
+				margin-left:4.5cm;
+				border-radius: 50%;
+				font-weight: bold;
+				font-family:Verdana;
+				cursor:pointer;
+				}			
+			div{
+				width:100px;
+				height:30px;
+				color:black;
+				padding:5px;
+				border:1px solid black;
+				margin: 10px auto;
+			}
+			p{
+			font-family:Verdana;
+			}
+			body{
+				background-image:url("back2.png");
+			}
+		</style>
+	</head>
+		
+	<body>
+		<!----------------------------------------------------------------HEADER AND SSN LOGO----------------------------------------------------->
+			<img id="i1" 
+			src="SSNLogo.png" alt="Logo" />
+			<div style="float:center; width:810px; height:80px;color:white;background-color:blue;margin-left:9cm;">
+				<h1 style="padding-bottom:10px;"><center>SSN COLLEGE OF ENGINEERING</center></h1>
+			</div>
+		<hr></hr>
+		
+		<!-----------------------------------------------------ROUNDED BUTTONS------------------------------------------------------------------>
+		<a href="http://www.ssn.edu.in">
+			<button class="button AboutButton" >About</button>
+		</a>
+		<a href="http://www.ssn.edu.in/?page_id=222">
+			<button class="button ProgramsButton">Programs</button>
+		</a>
+		<a href="http://www.ssn.edu.in/?page_id=241">
+			<button class="button CampusButton">Campus</button>
+		</a>
+		<a href="http://www.ssn.edu.in/?page_id=18">
+			<button class="button ContactButton">Contact</button>
+		</a>
+		<br>
+		
+		<!------------------------------------------------PHOTO GALLERY------------------------------------------------------------------>
+		<div style="clear:both;float:left;width:180px;height:460px;position:relative;margin-left:1cm;border:transparent;">
+			<div id = "csediv" style="float:left;border:transparent;">
+				<img class = "bottom" id="LabCS" src="LabCS.png" alt="LabCS"></img>
+				<img class = "top" id="StudentCS" src="StudentCS.png" alt="StudentsCS"></img>
+			</div>
+			<br><br><br><br><br><br>
+			<div id = "itdiv" style = "clear:both;border:transparent;">
+				<img class = "bottom" id="LabIT" src="LabIT.png" alt="LabIT"></img>
+				<img class = "top" id="StudentCS" src="StudentIT.png" alt="StudentsIT"></img>
+			</div>
+			<br><br><br><br><br><br>
+			<div id = "eeediv" style = "clear:both;border:transparent; position:absolute;">
+				<img  class = "bottom" id="LabEEE" src="LabEEE.png" alt="LabEEE"></img>
+				<img class = "top" id="StudentCS" src="StudentEEE.png" alt="StudentsEEE"></img>
+			</div>
+			<br><br><br><br><br><br>
+			<div id = "ecediv" style = "clear:both;border:transparent;position:absolute;">
+				<img  class = "bottom" id="LabECE" src="LabECE.png" alt="LabECE"></img> 
+				<img class = "top" id="StudentCS" src="StudentECE.png" alt="StudentsECE"></img>
+			</div>
+			
+		</div>
+		<div style="background-color:blue;width:30px;height:350px;float:left;margin-left:-1cm;margin-top:1.5cm;">
+			<strong>
+				<p style="color:white;padding-left:1.2px;padding-top:30px;">P<br>H<br>O<br>T<br>O<br><br>G<br>A<br>L<br>L<br>E<br>R<br>Y</p>
+			</strong>
+			</div>
+		<!-----------------------------------------------------DEPARTMENTS AND TILTED BOXES----------------------------------------------------->
+		<div style="background-color:blue;width:30px;height:230px;float:left; margin-left:1.5cm;">
+			<strong>
+				<p style="color:white;padding-left:1.2px;">D<br>E<br>P<br>A<br>R<br>T<br>M<br>E<br>N<br>T<br>S</p>
+			</strong>
+		</div>
+		<div style="width:350px;height:230px; float:left;margin-left:0.5cm; border:1px solid black;">
+			<a href="http://www.ssn.edu.in/?page_id=427">
+				<div style="transform:rotate(-10deg);width:300px;height:20px;float:left;margin-top:0.6cm;">
+					<strong>Computer Science
+				</div>
+			</a>
+			<a href="http://www.ssn.edu.in/?page_id=441">
+				<div id="ITBox" style="transform:rotate(-5deg);width:300px;height:20px;float:left;margin-top:0.1cm;margin-left:0.15cm;">
+					Information Technology
+				</div>
+			</a>
+			<a href="http://www.ssn.edu.in/?page_id=61">
+				<div id="EEEBox" style="transform:rotate(5deg);width:300px;height:20px;float:left;margin-top:0.4cm;margin-left:0.15cm;">
+					Electrical and Electronics
+				</div>
+			</a>
+			<a href="http://www.ssn.edu.in/?page_id=413">
+				<div id="ECEBox" style="transform:rotate(10deg);width:300px;height:20px;float:left;margin-top:0.05cm;">
+					Electronics and Communication</strong>
+				</div>	
+			</a>		
+		</div>
+		
+		<!------------------------------------------------------EVENTS AND MOVING BOXES------------------------------------------------------------->
+		<div style="background-color:blue;width:30px;height:199px;float:left; margin-left: -11.2cm;margin-top:265px;">
+			<strong>
+				<p style="color:white;padding-left:1.2px; padding-top:15px;">E<br>V<br>E<br>N<br>T<br>S</p>
+			</strong>
+		</div>
+		<div style="width:350px;height:199px; float:left;margin-left:-9.55cm;margin-top:265px; border:1px solid black">
+		<a href="http://www.ssn.edu.in/?page_id=441">
+			<div id="e1" style="margin-top:0cm;float:left;border:transparent;">
+				
+			</div>
+		</a>
+		<a href="http://www.ssn.edu.in/?page_id=441">
+			<div id="e2" style="margin-top:1px;float:left;clear:both;border:transparent;">
+				
+			</div>
+		</a>
+		<a href="http://www.ssn.edu.in/?page_id=441">
+			<div id="e3" style="margin-top:2px;float:left;clear:both;border:transparent;">
+				
+			</div>
+		</a>
+		<a href="http://www.ssn.edu.in/?page_id=441">
+			<div id="e4" style="margin-top:1px;float:left;clear:both;border:transparent;">
+				
+			</div>
+		</a>
+		</div>
+		
+		<!------------------------------------------------------SHORT VIDEO---------------------------------------------------------->
+		<div style="width:500px; margin-left:20cm;background-color:blue;color:white;">
+			<center><strong>SHORT VIDEO</strong></center>
+			<br><br>
+			<iframe style="width:500px;height:401px;" src="https://www.youtube.com/embed/RPx-G6zxMyE"></iframe>
+		</div>
+		
+	</body>
+</html>

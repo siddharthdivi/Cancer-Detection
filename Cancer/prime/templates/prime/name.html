@@ -1,0 +1,25 @@
+<html>
+<body style="background-color:#440977;color:white;font-family: "Times New Roman", Times, serif;">
+<pre style='text-align:center;font-family: "Times New Roman", Times, serif;font-style: italic;color:white'><h1>Enter Attributes</h1></pre>
+<pre style='font-size:20px;font-family: "Times New Roman", Times, serif'>Enter the following attribute fields to get the diagnosis.</pre>
+<form action="/users/input/" method="post">
+    {% csrf_token %}
+    <!-- |linebreaks add new lines. !-->
+
+    <table>
+    {{ form.as_table }}
+    </table>
+    <!--
+    {% for field in form %}
+            <div class="fieldWrapper">
+                {{ field.label_tag }} {{ field }}
+                {% if field.help_text %}
+                <p class="help">{{ field.help_text|safe }}</p>
+                {% endif %}
+            </div>
+    {% endfor %}-->
+    <br/>
+    <input style=" height:30px; width:150px; background:pink;color: White;width:400;align:center;" type="submit" value="Get Diagnosis" />
+</form>
+</body>
+</html>

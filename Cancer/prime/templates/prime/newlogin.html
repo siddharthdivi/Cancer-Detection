@@ -1,0 +1,18 @@
+<html>
+<body style="background-color:lightsteelblue;">
+<pre style="text-align:center; letter-spacing : 1.5em;"><h1>Login Page</h1></pre>
+
+<form action="/users/login/" method="post">
+    {% csrf_token %}
+    <!-- |linebreaks add new lines. !-->
+
+    <table>
+    {{ form.as_table }}
+    </table>
+
+    <br/>
+    <input style=" height:30px; width:150px; background:lightgreen;" type="submit" value=" Login " />
+
+</form>
+</body>
+</html>

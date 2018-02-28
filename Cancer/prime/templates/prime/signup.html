@@ -1,0 +1,16 @@
+<html>
+<body style="background-color:lightblue;">
+<pre style="text-align:center; font-size:45px; letter-spacing:0.5em;">SIGN-UP</pre>
+<pre style="font-size:25px; letter-spacing:0.2em;">Please enter the following fields!!</pre>
+<fieldset>
+<form action="/users/signup/" method="POST">
+<!--Cross Site Request Forgery!-->
+{% csrf_token %}
+  <table>
+  {{ form.as_table }}
+  </table>
+    <input style=" height:30px; width:150px; background:lightgreen;" type="submit" value="Register" />
+</form>
+</fieldset>
+</body>
+</html>
