@@ -1,0 +1,2 @@
+The 'Doctor' table is displaying but the corresponding django-tables2 css file not being applied.
+Why ? : Don't know as of now. Have to check it out.
